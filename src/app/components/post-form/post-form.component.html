@@ -1,0 +1,29 @@
+
+<form style="border: 1px solid #d3d3d3;" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col">
+       <div class="subTitle p-1"><p class="ml-2 h3" ><span name="name"  [(ngModel)]="name">{{name}}</span> DETAILS</p></div>
+       
+       
+       <div class="input-group">
+       <label class="item" > Quantity </label>
+      </div>
+      <input name="quantity" type="text" class="form-control" (keyup)="onKey(quantity)" [(ngModel)]="quantity">
+    
+    <div class="input-group-prepend">
+    <label class="item" > Price</label>
+  </div>
+      <input name="price" type="text" class="form-control" [(ngModel)]="price">
+
+    <div class="input-group">
+    <label class="item"> Description </label>
+  </div>
+        <input value="{{description}}" name="description" type="text" class="form-control" [(ngModel)]="description">
+
+    </div>
+  </div>
+
+
+
+ <input  type="submit" class="btn btn-outline-warning mt-2" value="edit item">
+</form>

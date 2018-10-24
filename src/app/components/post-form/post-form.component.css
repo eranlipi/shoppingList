@@ -1,0 +1,8 @@
+.subTitle{
+    color:#Ffffff;
+    background-image: linear-gradient(to right top, rgba(0,229,145,1), rgba(47,239,188,1));
+}
+
+.item{
+    padding: 10px 5px 10px 5px;
+}

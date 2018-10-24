@@ -1,0 +1,15 @@
+<div style="border: 1px solid #d3d3d3;" class="col">
+    <div class="subTitle p-1"><p class="ml-2 h3">ADD YOUR ITEMS HERE</p></div>
+  <ul *ngFor="let item of items" class="list-group">
+      <li  [style.text-decoration]="isChecked ? 'none' : 'line-through'" (click)="onSelect(item)" class="list-group-item">
+         <input style="margin-right:5px;" (click)="changeStyle(item)" type="checkbox"> 
+         <input  type="text"  [(ngModel)]="item.name" value="{{item.name}}">   
+         <i (click)="onDelete(item)" style="color:red;" class="pull-right fa fa-remove"></i></li> 
+  </ul>
+
+  <form (ngSubmit)="onSubmit()">
+    <input placeholder="add a Item" (keyup.enter)="onEnter(item.name)" name="name" type="text" class="form-control" [(ngModel)]="name">
+    <!-- <input  type="submit"  class="btn btn-outline-success mt-2" value="Add item"> -->
+    </form>
+
+</div>
